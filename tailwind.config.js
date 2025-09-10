@@ -7,7 +7,7 @@ export default {
 
         coffee: {
           500: "#331B07", // cta, section darkmode
-          400: "#361C07" // cta hover
+          400: "#3A1C03" // cta hover
         },
         beige: {
           50: "#E8DCCF", //cta text

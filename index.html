@@ -14,8 +14,13 @@
 
 <body>
 
-  <section class="h-[631px] md:h-[501px] lg:h-[621px] xl:h-[800px] bg-cover bg-center bg-no-repeat"
-    style="background-image: url('/public/hero-bg.png');">
+  <!-- Hero Section -->
+  <section class="h-[631px] md:h-[501px] lg:h-[621px] xl:h-[800px]
+    bg-cover bg-center bg-no-repeat
+    bg-[url('/hero-bg.png')]               
+    xl:bg-[url('/xl-hero-bg.png')] lg:bg-[url('/xl-hero-bg.png')]       
+    xl:bg-[position:80%_center] lg:bg-[position:80%_center]     
+  ">
 
     <div class="flex items-center justify-center lg:justify-start h-full bg-black/20">
 
@@ -27,14 +32,155 @@
           Discover the aroma that awakens you. From bean to cup.
         </p>
         <a href="#products"
-          class="bg-coffee-500 mt-6 inline-block px-16 py-5 text-beige-50 text-lg rounded-sm shadow-[0_0_10px_rgba(255,255,255,0.2)]  hover:bg-coffee-400 transition">
+          class="bg-coffee-500 mt-6 inline-block px-16 py-5 text-beige-50 text-lg rounded-sm shadow-[0_0_10px_rgba(255,255,255,0.2)]  hover:bg-coffee-400 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition">
           SHOP NOW
         </a>
       </div>
 
     </div>
-
   </section>
+
+  <!-- PRODUCT SECTION -->
+  <section id="products" class="bg-white py-14 md:py-20">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-center text-2xl md:text-3xl font-bold text-coffee-800 tracking-wide">
+        PRODUCTS
+      </h2>
+
+      <!-- Grid: 2x2 on sm/md, 1x4 on lg+ -->
+      <div class="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 px-6 md:gap-x-6 md:px-20 lg:grid-cols-4 lg:gap-x-8 lg:px-0">
+
+        <!-- Card 1 -->
+        <article class="max-w-sm p-4 text-center group">
+          <img src="/product1.png" alt="Costa Rica coffee bag"
+            class="mx-auto h-36 md:h-40 object-contain transition-transform duration-300 ease-out group-hover:scale-[1.04] will-change-transform" />
+          <h3 class="mt-4 text-sm md:text-base font-semibold text-coffee-800">
+            <a href="#" class="hover:underline focus:underline">Costa Rica</a>
+          </h3>
+          <div class="mt-1 flex items-center justify-center gap-0.5 text-yellow-500">
+            <!-- 5 stars -->
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+          </div>
+          <p class="mt-2 text-sm font-medium text-coffee-700">€18,50</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="p-4 text-center group">
+          <img src="/product2.png" alt="Ethiopia coffee bag"
+            class="mx-auto h-36 md:h-40 object-contain shadow-sm transition-transform duration-300 ease-out group-hover:scale-[1.04] will-change-transform" />
+          <h3 class="mt-4 text-sm md:text-base font-semibold text-coffee-800">
+            <a href="#" class="hover:underline focus:underline">Ethiopia</a>
+          </h3>
+          <div class="mt-1 flex items-center justify-center gap-0.5 text-yellow-500">
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+          </div>
+          <p class="mt-2 text-sm font-medium text-coffee-700">€18,50</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="p-4 text-center group">
+          <img src="/product3.png" alt="Colombia coffee bag"
+            class="mx-auto h-36 md:h-40 object-contain shadow-sm transition-transform duration-300 ease-out group-hover:scale-[1.04] will-change-transform" />
+          <h3 class="mt-4 text-sm md:text-base font-semibold text-coffee-800">
+            <a href="#" class="hover:underline focus:underline">Colombia</a>
+          </h3>
+          <div class="mt-1 flex items-center justify-center gap-0.5 text-yellow-500">
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+          </div>
+          <p class="mt-2 text-sm font-medium text-coffee-700">€18,50</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="p-4 text-center group">
+          <img src="/product4.png" alt="Brazil coffee bag"
+            class="mx-auto h-36 md:h-40 object-contain shadow-sm transition-transform duration-300 ease-out group-hover:scale-[1.04] will-change-transform" />
+          <h3 class="mt-4 text-sm md:text-base font-semibold text-coffee-800">
+            <a href="#" class="hover:underline focus:underline">Brazil</a>
+          </h3>
+          <div class="mt-1 flex items-center justify-center gap-0.5 text-yellow-500">
+            <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg><svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+              <path
+                d="M10 15l-5.878 3.09L5.5 11.545.999 7.41l6.061-.88L10 1l2.94 5.53 6.061.88-4.5 4.135 1.378 6.545z" />
+            </svg>
+          </div>
+          <p class="mt-2 text-sm font-medium text-coffee-700">€18,50</p>
+        </article>
+
+      </div>
+
+      <!-- CTA sotto la griglia (opzionale) -->
+      <div class="mt-8 text-center">
+        <a href="#shop"
+          class="inline-block px-8 py-3 rounded-sm bg-brand text-brand-foreground hover:bg-brand-hover transition">
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
 
 
 
