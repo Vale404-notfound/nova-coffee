@@ -22,13 +22,13 @@
     <div class="mx-auto max-w-6xl px-4 h-14 md:h-16 flex items-center justify-between">
 
       <!-- LEFT: hamburger (hidden on xl) -->
-      <button aria-label="Open menu"
+      <button id="menuBtn" aria-label="Open menu"
         class="xl:hidden p-2 -ml-2 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-current hover:text-beige-50 transition-colors">
-        <!-- ICON: menu.svg -->
         <span aria-hidden class="inline-block h-7 w-7 md:h-8 md:w-8 bg-[currentColor]
-                   [mask-image:url('/menu.svg')] [-webkit-mask-image:url('/menu.svg')]
-                   mask-no-repeat [mask-position:center] [mask-size:contain]"></span>
+               [mask-image:url('/menu.svg')] [-webkit-mask-image:url('/menu.svg')]
+               [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]"></span>
       </button>
+
 
       <!-- LEFT (xl+):logo NOVACOFFEE -->
       <a href="/" class="hidden xl:inline-block leading-none select-none">
@@ -77,6 +77,50 @@
 
     </div>
   </nav>
+
+  <!-- DRAWER (side menu) -->
+  <div id="drawer" class="fixed inset-0 z-[60] pointer-events-none">
+    <!-- overlay -->
+    <div id="drawerOverlay" class="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300"></div>
+
+    <!-- panel -->
+    <aside id="drawerPanel" class="absolute left-0 top-0 h-screen w-80 sm:w-96 bg-beige-lighter
+                shadow-xl -translate-x-full transition-transform duration-300 will-change-transform">
+
+      <!-- SEARCH (no hover, bottom shadow) -->
+      <div class="mb-2 px-4 py-6 bg-beige-lighter shadow-md">
+        <div class="flex items-center gap-4">
+          <input type="text" placeholder="Search"
+            class="flex-1 ml-2 bg-transparent placeholder:text-coffee-500/50 text-coffee-500 text-md font-semibold outline-none " />
+          <span aria-hidden class="inline-block mr-3 h-6 w-6 text-coffee-500/50 bg-[currentColor]
+                     [mask-image:url('/search.svg')] [-webkit-mask-image:url('/search.svg')]
+                     [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]"></span>
+
+        </div>
+      </div>
+
+      <!-- LINKS -->
+      <nav aria-label="Mobile menu">
+        <ul class="divide-y divide-black/10">
+          <li><a href="#"
+              class="block px-5 py-4 bg-beige-lighter hover:bg-beige-50 text-coffee-500 font-semibold">HOME</a></li>
+          <li><a href="#"
+              class="block px-5 py-4 bg-beige-lighter hover:bg-beige-50 text-coffee-500 font-semibold">COFFEES</a></li>
+          <li><a href="#" class="block px-5 py-4 bg-beige-lighter hover:bg-beige-50 text-coffee-500 font-semibold">ABOUT
+              US</a></li>
+          <li><a href="#" class="block px-5 py-4 bg-beige-lighter hover:bg-beige-50 text-coffee-500 font-semibold">BREW
+              TIPS</a></li>
+          <li><a href="#"
+              class="block px-5 py-4 bg-beige-lighter hover:bg-beige-50 text-coffee-500 font-semibold">SUSTAINABILITY</a>
+          </li>
+          <li><a href="#"
+              class="block px-5 py-4 bg-beige-lighter hover:bg-beige-50 text-coffee-500 font-semibold">CONTACT</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+  </div>
+
 
 
 
@@ -345,6 +389,40 @@
       window.addEventListener('scroll', onScroll, { passive: true });
     }
   </script>
+
+
+  <script>
+    (function () {
+      const html = document.documentElement;
+      const btn = document.getElementById('menuBtn');
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawerOverlay');
+      const panel = document.getElementById('drawerPanel');
+
+      if (!btn || !drawer || !overlay || !panel) return;
+
+      const open = () => {
+        drawer.classList.remove('pointer-events-none');
+        overlay.classList.add('opacity-100');
+        panel.classList.remove('-translate-x-full');
+        html.classList.add('overflow-hidden'); // lock scroll
+      };
+
+      const close = () => {
+        overlay.classList.remove('opacity-100');
+        panel.classList.add('-translate-x-full');
+        html.classList.remove('overflow-hidden');
+        // ritarda la disattivazione dei click fino a fine animazione
+        setTimeout(() => drawer.classList.add('pointer-events-none'), 300);
+      };
+
+      btn.addEventListener('click', open);
+      overlay.addEventListener('click', close);
+      drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+    })();
+  </script>
+
 
 
 </body>
