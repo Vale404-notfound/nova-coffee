@@ -12,7 +12,7 @@ export default {
         beige: {
           50: "#E8DCCF", //cta text
           200: "#DCC8B2", // testi chiari, cta light mode
-          footer: "#F5E9DD", // footer light mode
+          lighter: "#F5E9DD", // side menu, footer light mode
         },
       },
       fontFamily: {
