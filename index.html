@@ -18,7 +18,7 @@
 
   <!-- NAVBAR -->
   <nav id="mainNav" class="fixed top-0 inset-x-0 z-50 bg-transparent text-beige-200 transition-colors duration-300">
-    <div class="mx-auto max-w-6xl px-4 h-14 md:h-16 flex items-center justify-between">
+    <div class="mx-auto max-w-6xl  px-4 h-14 md:h-16 flex items-center justify-between">
 
       <!-- LEFT: hamburger (hidden on xl) -->
       <button aria-label="Open menu"
@@ -30,10 +30,21 @@
       </button>
 
       <!-- LEFT (xl+):logo NOVACOFFEE -->
-      <a href="/" class="hidden xl:flex flex-col leading-none font-bold tracking-[0.22em]">
-        <span class="text-sm">NOVA</span>
-        <span class="text-[10px] tracking-[0.35em] -mt-0.5">COFFEE</span>
+      <a href="/" class="hidden xl:inline-block leading-none select-none">
+        <span class="sr-only">Nova Coffee</span>
+
+        <!-- The container takes the width of the widest line (COFFEE) -->
+        <div class=" inline-grid font-bold">
+          <!-- Top line: NOVA stretched to match COFFEE's width -->
+          <div class="flex w-full justify-between text-2xl">
+            <span>N</span><span>O</span><span>V</span><span>A</span>
+          </div>
+
+          <!-- Bottom line: COFFEE (defines the natural width) -->
+          <div class="text-2xl -mt-3">COFFEE</div>
+        </div>
       </a>
+
 
       <!-- CENTER (xl+): expanded menu -->
       <ul class="hidden xl:flex items-center gap-7 text-md font-semibold uppercase">
