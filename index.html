@@ -285,6 +285,35 @@
   </section>
 
   <script type="module" src="/src/main.js"></script>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    const links = () => nav.querySelectorAll('.navlink');
+
+    function applyScrolledState(on) {
+      if (on) {
+        nav.classList.add('bg-beige-200/95', 'backdrop-blur', 'shadow-sm', 'text-coffee-900');
+        nav.classList.remove('bg-transparent', 'text-white');
+        links().forEach(a => {
+          a.classList.add('text-coffee-900', 'hover:text-coffee-700');
+          a.classList.remove('text-white/90', 'hover:text-white');
+        });
+      } else {
+        nav.classList.add('bg-transparent', 'text-white');
+        nav.classList.remove('bg-beige-200/95', 'backdrop-blur', 'shadow-sm', 'text-coffee-900');
+        links().forEach(a => {
+          a.classList.add('text-white/90', 'hover:text-white');
+          a.classList.remove('text-coffee-900', 'hover:text-coffee-700');
+        });
+      }
+    }
+
+    const onScroll = () => applyScrolledState(window.scrollY > 10);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
+
+
 </body>
 
 </html>
