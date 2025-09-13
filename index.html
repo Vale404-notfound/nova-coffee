@@ -539,21 +539,13 @@
              xl:grid-cols-4">
 
         <!-- ROW 1 (logo) -->
-        <div class="order-1 md:col-span-2 lg:col-span-2 xl:col-span-4 flex justify-center">
-          <!-- Logo compatto per sm/md/lg -->
-          <a href="/"
-            class="inline-flex flex-col items-center leading-none select-none font-bold tracking-[0.22em] xl:hidden">
-            <span class="text-base">NOVA</span>
-            <span class="text-[11px] tracking-[0.35em] -mt-0.5">COFFEE</span>
-          </a>
-          <!-- Logo “stretched” solo xl (come da richiesta) -->
-          <a href="/" class="hidden xl:inline-block leading-none select-none">
-            <span class="sr-only">Nova Coffee</span>
-            <div class="inline-grid font-bold">
-              <div class="flex w-full justify-between text-2xl"><span>N</span><span>O</span><span>V</span><span>A</span>
-              </div>
-              <div class="text-2xl -mt-3">COFFEE</div>
+        <div
+          class="order-1 md:col-span-2 lg:col-span-2 xl:col-span-4 flex justify-center md:justify-start lg:justify-center">
+
+          <a href="/" class="inline-flex flex-col items-center leading-none select-none font-bold tracking-[0.22em] ">
+            <div class="flex w-full justify-between text-2xl"> <span>N</span><span>O</span><span>V</span><span>A</span>
             </div>
+            <div class="text-2xl -mt-3">COFFEE</div>
           </a>
         </div>
 
@@ -586,17 +578,22 @@
           <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Shop</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="#"
-                class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Blends</a></li>
-            <li><a href="#"
-                class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Capsules</a></li>
-            <li><a href="#"
-                class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Subscription</a>
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Blends</a>
             </li>
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Single
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Capsules</a>
+            </li>
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Subscription</a>
+            </li>
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Single
                 Origins</a></li>
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Brewing
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Brewing
                 Gear</a></li>
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Gift
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Gift
                 Bundles</a></li>
           </ul>
         </section>
@@ -606,33 +603,48 @@
                md:col-span-1 lg:col-span-1 xl:col-span-1">
           <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Help</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Privacy
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Privacy
                 Policy</a></li>
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Sales
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Sales
                 Policy</a></li>
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Shipping
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Shipping
                 &amp; Returns</a></li>
-            <li><a href="#" class="underline underline-offset-4 hover:text-coffee-400 dark:hover:text-beige-50">Contact
+            <li><a href="#"
+                class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Contact
                 Us</a></li>
           </ul>
         </section>
 
         <!-- ROW 3: Stay connected -->
-        <!-- sm: col singola centrata; md: riga sotto le due colonne; lg: col sx (insieme ai luoghi); xl: centrato su 4 colonne -->
-        <section class="order-6 md:col-span-2 lg:col-span-1 xl:col-span-4
-               text-center">
+        <section class="order-6 md:col-span-2 lg:col-span-1 xl:col-span-4 text-center">
           <h4 class="text-xs font-semibold uppercase tracking-widest mb-3">Stay Connected</h4>
+
           <div class="flex items-center justify-center gap-5">
+            <!-- Facebook -->
             <a href="#" aria-label="Facebook" class="inline-flex h-5 w-5 bg-[currentColor]
-                    [mask-image:url('/fb.svg')] [-webkit-mask-image:url('/fb.svg')]
-                    [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]
-                    opacity-90 hover:opacity-100 transition" />
+              [mask-image:url('/fb.svg')] [-webkit-mask-image:url('/fb.svg')]
+              [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
+              [mask-position:center] [-webkit-mask-position:center]
+              [mask-size:contain] [-webkit-mask-size:contain]
+              opacity-90 hover:opacity-100 transition">
+              <span class="sr-only">Facebook</span>
+            </a>
+
+            <!-- Instagram -->
             <a href="#" aria-label="Instagram" class="inline-flex h-5 w-5 bg-[currentColor]
-                    [mask-image:url('/insta.svg')] [-webkit-mask-image:url('/insta.svg')]
-                    [mask-repeat:no-repeat] [mask-position:center] [mask-size:contain]
-                    opacity-90 hover:opacity-100 transition" />
+              [mask-image:url('/insta.svg')] [-webkit-mask-image:url('/insta.svg')]
+              [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]
+              [mask-position:center] [-webkit-mask-position:center]
+              [mask-size:contain] [-webkit-mask-size:contain]
+              opacity-90 hover:opacity-100 transition">
+              <span class="sr-only">Instagram</span>
+            </a>
           </div>
         </section>
+
 
         <!-- ROW 4: Copyright -->
         <p class="order-7 md:col-span-2 lg:col-span-2 xl:col-span-4
