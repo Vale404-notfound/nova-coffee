@@ -1,5 +1,7 @@
 # NovaCoffee — Landing Website (Vite + Tailwind CSS)
 
+**Figma:** [Figma link](https://www.figma.com/design/dtyEOCCrjoYc57DNZ8Y5N3/NovaCoffee?node-id=223-56245&m=dev&t=B8YN1MgX1mBNYopg-1)
+
 **Demo:** https://nova-coffee.netlify.app/  
 
 
