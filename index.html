@@ -533,26 +533,98 @@
     <div class="mx-auto max-w-6xl px-6 md:px-10 lg:px-14 xl:px-16 py-12 md:py-16">
 
       <!-- GRID RESPONSIVE -->
-      <div class="grid gap-10
-             md:grid-cols-2 md:auto-rows-auto
-             lg:grid-cols-2 lg:auto-rows-auto
-             xl:grid-cols-4">
+      <div class="grid gap-10 
+                md:grid-cols-2 md:auto-rows-auto
+                lg:grid-cols-2 lg:auto-rows-auto
+                xl:grid-cols-4
+                md:justify-items-center lg:justify-items-center xl:justify-items-center">
 
         <!-- ROW 1 (logo) -->
         <div
           class="order-1 md:col-span-2 lg:col-span-2 xl:col-span-4 flex justify-center md:justify-start lg:justify-center">
 
-          <a href="/" class="inline-flex flex-col items-center leading-none select-none font-bold tracking-[0.22em] ">
-            <div class="flex w-full justify-between text-2xl"> <span>N</span><span>O</span><span>V</span><span>A</span>
+          <a href="/" class="inline-flex flex-col items-center leading-none select-none font-bold tracking-[0.22em]">
+            <div class="flex w-full justify-between text-2xl">
+              <span>N</span><span>O</span><span>V</span><span>A</span>
             </div>
             <div class="text-2xl -mt-3">COFFEE</div>
           </a>
         </div>
 
-        <!-- ROW 2 -->
-        <!-- Headquarters -->
-        <section class="order-2 text-center md:text-left
-               md:col-span-1 lg:col-span-1 xl:col-span-1">
+
+        <!-- Stack sinistro: Headquarters + Warehouse (sm/MD/LG) -->
+        <div class="order-2 md:col-start-1 md:col-span-1 xl:hidden space-y-8 text-center md:text-left">
+          <!-- Headquarters -->
+          <section>
+            <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Headquarters</h3>
+            <p class="text-sm leading-6">
+              Via Roma 45, 20121 Milano,<br>Italy<br>
+              Ph: +39 02 1234 5678<br>
+              Email: info@origincoffee.com
+            </p>
+          </section>
+
+          <!-- Warehouse & Roastery -->
+          <section>
+            <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Warehouse &amp; Roastery</h3>
+            <p class="text-sm leading-6">
+              Calle del Café 22, 28012<br>
+              Madrid, Spain<br>
+              Ph: +34 91 987 6543
+            </p>
+          </section>
+        </div>
+
+        <!-- Stack destro: Shop + Help (sm/md/lg) -->
+        <div class="order-3 md:col-start-2 md:col-span-1 xl:hidden space-y-8 text-center md:text-left">
+          <!-- Shop -->
+          <section>
+            <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Shop</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Blends</a>
+              </li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Capsules</a>
+              </li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Subscription</a>
+              </li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Single
+                  Origins</a></li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Brewing
+                  Gear</a></li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Gift
+                  Bundles</a></li>
+            </ul>
+          </section>
+
+          <!-- Help -->
+          <section>
+            <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Help</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Privacy
+                  Policy</a></li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Sales
+                  Policy</a></li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Shipping
+                  &amp; Returns</a></li>
+              <li><a href="#"
+                  class="underline underline-offset-4 text-coffee-500 hover:text-coffee-400/80 dark:hover:text-beige-50">Contact
+                  Us</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <!--  XL LAYOUT (4 colonne) -->
+        <!-- Headquarter -->
+        <section class="order-2 hidden xl:block xl:col-start-1">
           <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Headquarters</h3>
           <p class="text-sm leading-6">
             Via Roma 45, 20121 Milano,<br>Italy<br>
@@ -561,9 +633,8 @@
           </p>
         </section>
 
-        <!-- Warehouse & Roastery -->
-        <section class="order-3 text-center md:text-left
-               md:col-span-1 lg:col-span-1 xl:col-span-1">
+        <!-- Warehouse -->
+        <section class="order-3 hidden xl:block xl:col-start-2">
           <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Warehouse &amp; Roastery</h3>
           <p class="text-sm leading-6">
             Calle del Café 22, 28012<br>
@@ -572,9 +643,8 @@
           </p>
         </section>
 
-        <!-- SHOP -->
-        <section class="order-4 text-center md:text-left
-               md:col-span-1 lg:col-span-1 xl:col-span-1">
+        <!-- Shop -->
+        <section class="order-4 hidden xl:block xl:col-start-3">
           <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Shop</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="#"
@@ -598,9 +668,8 @@
           </ul>
         </section>
 
-        <!-- HELP -->
-        <section class="order-5 text-center md:text-left
-               md:col-span-1 lg:col-span-1 xl:col-span-1">
+        <!-- Help -->
+        <section class="order-5 hidden xl:block xl:col-start-4">
           <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">Help</h3>
           <ul class="space-y-2 text-sm">
             <li><a href="#"
@@ -619,10 +688,15 @@
         </section>
 
         <!-- ROW 3: Stay connected -->
-        <section class="order-6 md:col-span-2 lg:col-span-1 xl:col-span-4 text-center">
+        <section class="order-6 md:-mt-24 xl:mt-2 md:-ml-16 xl:ml-0
+         md:col-start-1 md:col-span-1
+         lg:col-start-1 lg:col-span-1
+         xl:col-span-4
+         text-center md:text-left xl:text-center">
+
           <h4 class="text-xs font-semibold uppercase tracking-widest mb-3">Stay Connected</h4>
 
-          <div class="flex items-center justify-center gap-5">
+          <div class="flex items-center justify-center md:justify-start xl:justify-center gap-5">
             <!-- Facebook -->
             <a href="#" aria-label="Facebook" class="inline-flex h-5 w-5 bg-[currentColor]
               [mask-image:url('/fb.svg')] [-webkit-mask-image:url('/fb.svg')]
@@ -647,28 +721,12 @@
 
 
         <!-- ROW 4: Copyright -->
-        <p class="order-7 md:col-span-2 lg:col-span-2 xl:col-span-4
-                text-center text-[11px] opacity-80">
+        <p class="order-7 md:col-span-2 lg:col-span-2 xl:col-span-4 text-center text-[11px] opacity-80">
           © 2025 Origin Coffee. All rights reserved.
         </p>
       </div>
     </div>
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
