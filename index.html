@@ -17,8 +17,9 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav id="mainNav"
-    class="fixed top-0 px-6 pt-16 pb-4 inset-x-0 z-50 bg-transparent text-beige-200 transition-colors duration-300">
+  <nav id="mainNav" class="fixed top-0 inset-x-0 z-50 px-6 pt-16 pb-4
+         bg-transparent text-beige-200
+         transition-all duration-300">
     <div class="mx-auto max-w-6xl px-4 h-14 md:h-16 flex items-center justify-between">
 
       <!-- LEFT: hamburger (hidden on xl) -->
@@ -738,44 +739,50 @@
 
   <script>
     const nav = document.getElementById('mainNav');
+
     if (nav) {
       const links = () => nav.querySelectorAll('.navlink');
-      const icons = () => nav.querySelectorAll('img[data-dark][data-light]');
 
       function setState(scrolled) {
-        // background + navbar text color
+        // sfondo / effetti / colore testo
+        nav.classList.toggle('bg-beige-200/95', scrolled);
+        nav.classList.toggle('backdrop-blur', scrolled);
+        nav.classList.toggle('shadow-sm', scrolled);
+        nav.classList.toggle('bg-transparent', !scrolled);
+
+        // compatta / espandi padding verticale
         if (scrolled) {
-          nav.classList.add('bg-beige-200/95', 'backdrop-blur', 'shadow-sm');
-          nav.classList.remove('bg-transparent');
-          // links color (xl)
-          links().forEach(a => {
-            a.classList.remove('text-beige-200');
-            a.classList.add('text-coffee-500', 'hover:text-coffee-700', 'transition-colors');
-          });
-          // swap icons to dark
-          icons().forEach(img => img.src = img.dataset.dark);
+          nav.classList.add('pt-4', 'pb-2');
+          nav.classList.remove('pt-16', 'pb-4');
         } else {
-          nav.classList.remove('bg-beige-200/95', 'backdrop-blur', 'shadow-sm');
-          nav.classList.add('bg-transparent');
-          // links color (xl)
-          links().forEach(a => {
+          nav.classList.remove('pt-4', 'pb-2');
+          nav.classList.add('pt-16', 'pb-4');
+        }
+
+        // link (xl) – colori coerenti con lo stato
+        links().forEach(a => {
+          if (scrolled) {
+            a.classList.remove('text-beige-200', 'hover:opacity-90');
+            a.classList.add('text-coffee-500', 'hover:text-coffee-700', 'transition-colors');
+          } else {
             a.classList.remove('text-coffee-500', 'hover:text-coffee-700');
             a.classList.add('text-beige-200', 'hover:opacity-90', 'transition-colors');
-          });
-          // swap icons to light
-          icons().forEach(img => img.src = img.dataset.light);
-        }
-        // ensure base nav text color cascades for inline SVG cases
+          }
+        });
+
+        // colore di base per icone con currentColor
         nav.classList.toggle('text-coffee-500', scrolled);
         nav.classList.toggle('text-beige-200', !scrolled);
       }
 
       const onScroll = () => setState(window.scrollY > 10);
-      // initialize default (top of page)
+
+      // init
       setState(window.scrollY > 10);
       window.addEventListener('scroll', onScroll, { passive: true });
     }
   </script>
+
 
 
   <script>
