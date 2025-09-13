@@ -1,6 +1,7 @@
 # NovaCoffee — Landing Website (Vite + Tailwind CSS)
 
-### Demo link -> https://example.com
+**Demo:** https://nova-coffee.netlify.app/  
+
 
 A responsive, accessible coffee brand landing site built with **Vite** and **Tailwind CSS 3**.
 
